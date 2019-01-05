@@ -1,0 +1,26 @@
+{
+  "autorun": true,
+  "terminals": [
+    {
+      "name": "API Gateway",
+      "focus": true,
+      "commands": ["cd api","nodemon index.js"]
+    },
+    {
+      "name": "Dough Service",
+      "commands": ["cd dough","nodemon index.js"]
+    },
+    {
+      "name": "Topping Service",
+      "commands": ["cd topping","nodemon index.js"]
+    },
+    {
+      "name": "Oven Service",
+      "commands": ["cd oven","nodemon index.js"]
+    },
+    {
+      "name": "Serving Service",
+      "commands": ["cd serving","nodemon index.js"]
+    }
+  ]
+}

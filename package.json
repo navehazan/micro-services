@@ -1,0 +1,15 @@
+{
+  "name": "pizzeria",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tal Bar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Talb2005/pizzeria/issues"
+  },
+  "homepage": "https://github.com/Talb2005/pizzeria#readme"
+}

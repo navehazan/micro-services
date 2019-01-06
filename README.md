@@ -10,7 +10,8 @@
 Pizza restaurant making use of micro-services architechture and child processes in Node JS.
 
 The API gateway receives an array of pizza orders, each order contains a 'toppings' array.
-The pizza is then passed on to the next station, in the following order Dough chef -> Topping chef -> Oven -> Serving.
+The pizza is then passed on to the next station / service, in the following order Dough chef -> Topping chef -> Oven -> Serving.
+
 Once all the orders have been served, a report is generated, specifying the time it took to prepare each order, and how much time each process took, as well as the total preperation time of all the orders. 
 The report is then stored in mongoDB, and is returned as the response to the initial request.  
 

@@ -28,7 +28,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 - Install Docker on your machine. https://www.docker.com/get-started
 
-- Clone the project. git clone https://github.com/Talb2005/micro-services.git
+- Clone the project to your machine. "git clone https://github.com/Talb2005/micro-services.git"
 
 - From the app root folder run: docker-compose up
 

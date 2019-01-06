@@ -8,6 +8,9 @@ module.exports = class DoughController {
 
   servePizza(req, res) {
     const order = req.body;
+    if (!order.prepTime.serving) {
+      order.prepTime.serving = new Date();
+    }
     if (this.availableWaiters) {
       this.availableWaiters--;
       const waiter = fork('./serving.process.js');

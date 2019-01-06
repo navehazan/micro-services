@@ -9,8 +9,7 @@ const addTwoToppingsPromise = (chunk) =>{
 };
 
 const addToppings = async (order) =>{
-  const processStart = new Date();
-  console.log(`Topping Chef ${process.pid} Started: ${processStart.toLocaleTimeString()}`);
+  console.log(`Topping Chef ${process.pid} Started: ${new Date().toLocaleTimeString()}`);
   const {toppings} = order;
   const chunks = _.chunk(toppings, 2);
   for (const chunk of chunks) {
@@ -18,7 +17,7 @@ const addToppings = async (order) =>{
   }
   const processEnd = new Date();
   console.log(`Topping Chef ${process.pid} Finished: ${processEnd.toLocaleTimeString()}`);
-  order.prepTime.toppings = (processEnd.getTime() - processStart.getTime()) / 1000;
+  order.prepTime.toppings = (processEnd.getTime() - new Date(order.prepTime.toppings).getTime()) / 1000;
   process.send(order);
 };
 

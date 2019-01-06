@@ -1,5 +1,5 @@
-const { fork } = require("child_process");
-const request = require("request-promise-native");
+const {fork} = require('child_process');
+const request = require('request-promise-native');
 
 module.exports = class DoughController {
   constructor() {
@@ -16,22 +16,25 @@ module.exports = class DoughController {
    */
   prepareDough(req, res) {
     const order = req.body;
+    if (!order.prepTime.dough) {
+      order.prepTime.dough = new Date();
+    }
     if (this.availableDoughChefs) {
       this.availableDoughChefs--;
-      const doughChef = fork("./dough.process.js");
+      const doughChef = fork('./dough.process.js');
       doughChef.send(order);
-      doughChef.on("message", _order => {
+      doughChef.on('message', (_order) => {
         doughChef.kill();
         this.availableDoughChefs++;
         this.processQueuedOrders();
         this.prepareToppingsRequest(_order)
-          .then(response => {
-            res.status(200).send(response);
-          })
-          .catch(err => res.status(500).send(err));
+            .then((response) => {
+              res.status(200).send(response);
+            })
+            .catch((err) => res.status(500).send(err));
       });
     } else {
-      this.orderQueue.push({ req, res });
+      this.orderQueue.push({req, res});
     }
   }
 
@@ -43,12 +46,12 @@ module.exports = class DoughController {
    */
   prepareToppingsRequest(order) {
     const reqOptions = {
-      url: "http://topping:3002/prepareToppings",
-      method: "post",
+      url: 'http://topping:3002/prepareToppings',
+      method: 'post',
       body: JSON.stringify(order),
       headers: {
-        "Content-Type": "application/json"
-      }
+        'Content-Type': 'application/json',
+      },
     };
     return request(reqOptions);
   }
@@ -61,7 +64,7 @@ module.exports = class DoughController {
   processQueuedOrders() {
     for (let i = 0; i < this.orderQueue.length; i++) {
       if (this.availableDoughChefs) {
-        const { req, res } = this.orderQueue[i];
+        const {req, res} = this.orderQueue[i];
         this.prepareDough(req, res);
         this.orderQueue.splice(i, 1);
         i--;

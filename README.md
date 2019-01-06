@@ -1,10 +1,58 @@
+
+
+
+
+
+
+
 # micro-services
+
 Pizza restaurant making use of micro-services architechture and child processes in Node JS.
 
-Install and run each service in a seperate terminal. (api, dough, toppings, oven, serving).
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+### Prerequisites
+
+What things you need to install the software and how to install them
+
+```
+Give examples
+```
+
+### Installing
+
+Install (npm i) and run (node index.js) each micro-service in a seperate terminal. (api, dough, toppings, oven, serving).
+
+```
+cd api
+npm i
+node index.js
+```
+```
+cd dough
+npm i
+node index.js
+```
+```
+cd toppings
+npm i
+node index.js
+```
+```
+cd oven
+npm i
+node index.js
+```
+```
+cd serving
+npm i
+node index.js
+```
 
 Make a POST request to http://localhost:3000/takeOrders with JSON data.
-Each order has a "toppings" array property. 
+Each order should have a "toppings" array property. 
 
 Example data:
 [
@@ -24,3 +72,19 @@ Example data:
     ]
   }  
 ]
+
+
+## Built With
+
+* [Node.js](https://nodejs.org/en/docs/) 
+* [Express.js](https://expressjs.com/) - Node.js web application framework
+
+
+## Author
+
+* **Tal Bar**
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+

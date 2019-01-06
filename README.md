@@ -14,6 +14,8 @@ Pizza restaurant making use of micro-services architechture and child processes 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
+* Node.js version 8.11.4 
+* MongoDB version 3.4.14
 
 What things you need to install the software and how to install them
 
@@ -76,8 +78,9 @@ Example data:
 
 ## Built With
 
-* [Node.js](https://nodejs.org/en/docs/) 
+* [Node.js](https://nodejs.org/en/docs/) - Open-source, cross-platform JavaScript run-time environment 
 * [Express.js](https://expressjs.com/) - Node.js web application framework
+* [MongoDB](https://docs.mongodb.com/) - Open-source NoSQL database program
 
 
 ## Author

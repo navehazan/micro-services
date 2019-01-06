@@ -59,6 +59,10 @@ Each order should have a "toppings" array property.
 ]
 ```
 
+### Database Access
+
+To inspect the generated report, connect your favorite MongoDB manager to localhost:27017. 
+
 ## Built With
 
 - [Node.js](https://nodejs.org/en/docs/) - Open-source, cross-platform JavaScript run-time environment

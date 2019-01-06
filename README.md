@@ -16,7 +16,8 @@ Once all the orders have been served, a report is generated, specifying the time
 
 The report is then stored in mongoDB, and is returned as the response to the initial request.  
 
-A different, more resiliant architechture could make use of a queue manager, such as Amazon Simple Queue Service (SQS), ZeroMQ and others. 
+A different, more resiliant architechture could make use of a queue manager to communicate between service.
+For example, Amazon Simple Queue Service (SQS), ZeroMQ and others. 
 
 ## Getting Started
 

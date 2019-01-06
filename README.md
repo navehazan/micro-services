@@ -1,7 +1,7 @@
 # micro-services
 
-Pizza restaurant making use of micro-services architechture and child processes in Node JS.
-Each micro-service runs in its own Docker container.
+* Pizza restaurant making use of micro-services architechture and child processes in Node JS.
+* Each micro-service runs in its own Docker container.
 
 The API gateway receives an array of pizza orders, each order contains a 'toppings' array.
 The pizza is then passed on to the next station / service, in the following order Dough chef -> Topping chef -> Oven -> Serving.

@@ -61,7 +61,7 @@ node index.js
 Make a POST request to http://localhost:3000/takeOrders with JSON data.
 Each order should have a "toppings" array property. 
 
-## Example input:
+## Example Input:
 ```
 [
   {

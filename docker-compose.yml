@@ -1,0 +1,44 @@
+version: "2"
+services:
+  api:
+    build: api
+    command: npm start
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+    links:
+      - mongo
+      - dough
+  dough:
+    build: dough
+    command: npm start
+    ports:
+      - "3001:3001"
+    links:
+      - topping
+  oven:
+    build: oven
+    command: npm start
+    ports:
+      - "3003:3003"
+    links:
+      - serving
+  serving:
+    build: serving
+    command: npm start
+    ports:
+      - "3004:3004"
+  topping:
+    build: topping
+    command: npm start
+    ports:
+      - "3002:3002"
+    links:
+      - oven
+  mongo:
+    image: mongo:3.4.14
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongo/db:/data

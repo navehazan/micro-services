@@ -4,7 +4,7 @@ Pizza restaurant making use of micro-services architechture and child processes 
 Each micro-service runs in its own Docker container.
 
 The API gateway receives an array of pizza orders, each order contains a 'toppings' array.<br />
-The pizza is then passed on to the next station / service, in the following order Dough chef -> Topping chef -> Oven -> Serving.
+The pizza is then passed on to the next station / service, in the following order:<br />Dough chef -> Topping chef -> Oven -> Serving.
 
 Once all the orders have been served, a report is generated, specifying the time it took to prepare each order, and how much time each process took, as well as the total preperation time of all the orders.
 

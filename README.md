@@ -3,7 +3,7 @@
 Pizza restaurant making use of micro-services architecture and child processes in Node JS.<br />
 Each micro-service runs in its own Docker container.
 
-The API gateway receives an array of pizza orders, each order contains a 'toppings' array.<br />
+The API gateway receives an array of pizza orders.<br />
 The pizza is then passed on to the next station / service, in the following order:<br />
 **Dough chef -> Topping chef -> Oven -> Serving.**
 

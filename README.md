@@ -22,7 +22,7 @@ These instructions will get you a copy of the project up and running on your loc
 * First, install MongoDB https://www.mongodb.com/download-center version 3.4.14. 
 Once installed, open a new terminal, and run the command - mongod
 
-* Second, install each micro-service seperately (api, dough, toppings, oven, serving):
+* Second, install and run each micro-service seperately (api, dough, toppings, oven, serving):
 ```
 cd api
 npm i

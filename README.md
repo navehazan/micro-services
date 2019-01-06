@@ -17,16 +17,12 @@ These instructions will get you a copy of the project up and running on your loc
 * Node.js version 8.11.4 
 * MongoDB version 3.4.14
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
-
 ### Installing
 
-Install (npm i) and run (node index.js) each micro-service in a seperate terminal. (api, dough, toppings, oven, serving).
+* First, install MongoDB https://www.mongodb.com/download-center version 3.4.14. 
+Once installed, open a new terminal, and run the command - mongod
 
+* Second, install each micro-service seperately (api, dough, toppings, oven, serving):
 ```
 cd api
 npm i

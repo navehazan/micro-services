@@ -14,7 +14,7 @@ The pizza is then passed on to the next station, in the following order Dough ch
 Once all the orders have been served, a report is generated, specifying the time it took to prepare each order, and how much time each process took, as well as the total preperation time of all the orders. 
 The report is then stored in mongoDB, and is returned as the response to the initial request.  
 
-
+A different, more resiliant architechture could make use of a queue manager, such as Amazon Simple Queue Service (SQS), ZeroMQ and others. 
 
 ## Getting Started
 

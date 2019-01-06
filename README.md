@@ -34,7 +34,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Using
 
-Make a POST request to http://localhost:3000/takeOrders with JSON data.
+Make a POST request to http://localhost:3000/takeOrders with JSON data.<br/>
 Each order should have a "toppings" array property.
 
 ### Example Input:
